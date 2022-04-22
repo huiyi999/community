@@ -5,6 +5,7 @@
 ```sh
 java -jar target/community-0.0.1-SNAPSHOT.jar
 ```
+address: http://localhost:8887/
 
 ## Technology stack
 |  Technology   | Function | Link   |   
