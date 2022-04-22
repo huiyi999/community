@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Community - Sign up</title>
+    <head th:insert="~{import :: head}"></head>
+    <!--    <link href="https://cdn.bootcss.com/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet"/>-->
+
+</head>
+<body>
+<div th:insert="~{navigation :: nav}"></div>
+
+<div class="container" style="width: 400px">
+
+    <form id="login" class="form-signin" th:action="@{/register}" method="post">
+        <h2 class="form-signin-heading">Please sign up!</h2>
+
+        <p style="color: red" th:if="${msg != null}" th:text="${msg}"></p>
+
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Username"
+               style="height:40px;line-height: 40px; background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+               style="height:40px;line-height: 40px; background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+    </form>
+
+</div>
+
+<!--<div class="ui container" style="padding-top: 180px; padding-bottom: 220px;">-->
+<!--    <div style="text-align: center; margin-bottom: 20px; ">-->
+<!--        <h1 class="header"> Please sign up! </h1>-->
+
+<!--        <p style="color: red" th:if="${msg != null}" th:text="${msg}"></p>-->
+<!--    </div>-->
+
+<!--    <div class="ui three column stackable grid login-div">-->
+<!--        <div class="column">-->
+<!--        </div>-->
+<!--        <div class="column">-->
+<!--            <form id="login" class="ui fluid form segment" th:action="@{/register}" method="post">-->
+<!--                <div class="field">-->
+<!--                    <label class="">Username</label>-->
+<!--                    <div class="ui left icon input">-->
+<!--                        <input type="text" name="username" placeholder="Username"/>-->
+<!--                        <i class="user icon"></i>-->
+<!--                        <div class="ui corner label">-->
+<!--                            <i class="icon asterisk"></i>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="field">-->
+<!--                    <label class="">Password</label>-->
+<!--                    <div class="ui left icon input">-->
+<!--                        <input type="password" name="password" placeholder="Password"/>-->
+<!--                        <i class="lock icon"></i>-->
+<!--                        <div class="ui corner label">-->
+<!--                            <i class="icon asterisk"></i>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="inline field" style="text-align: center">-->
+<!--                    <input type="submit" class="ui blue submit button" value="Sign Up">-->
+<!--                </div>-->
+<!--            </form>-->
+
+<!--        </div>-->
+<!--        <div class="column">-->
+
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</div>-->
+
+
+</body>
+</html>

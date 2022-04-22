@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Community - Publish </title>
+
+    <head th:insert="~{import :: head}"></head>
+    <head th:insert="~{import :: markdown}"></head>
+
+</head>
+<body>
+<div th:insert="~{navigation :: nav}"></div>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-12">
+            <h3><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Publish</h3>
+            <hr>
+            <form action="/publish" method="post">
+                <input type="hidden" name="id" th:value="${id}">
+
+                <div class="form-group">
+                    <label for="title">Post Title:</label>
+                    <input type="text" class="form-control" th:value="${title}" id="title" name="title"
+                           placeholder="Title">
+                </div>
+
+                <div class="form-group" id="post-editor" style="z-index: 2">
+                    <label for="description">Post Content:</label>
+                    <textarea name="description" th:text="${description}" style="display:none;"
+                              id="description" class="form-control"
+                              cols="30" rows="10"></textarea>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        var editor = editormd("post-editor", {
+                            width: "100%",
+                            height: 350,
+                            delay: 0,
+                            watch: false,
+                            placeholder: "Please input description...",
+                            path: "/js/lib/",
+                            imageUpload: true,
+                            imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                            imageUploadURL: "/file/upload",
+                        });
+                    });
+                </script>
+
+
+                <div class="form-group">
+                    <label for="tag">Post Tag:</label>
+                    <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag"
+                           autocomplete="off"
+                           placeholder="Input tag, separated by ','"
+                           onclick="showSelectTag()">
+                    <div id="select-tag" class="publish-tag-tab">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" th:each="selectCategory,selectCategoryStat: ${tags}"
+                                th:class="${selectCategoryStat.first ? 'active':''}">
+                                <a th:href="${'#'+selectCategory.categoryName}" aria-controls="home" role="tab"
+                                   data-toggle="tab" th:text="${selectCategory.categoryName}"></a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" th:id="${selectCategory.categoryName}"
+                                 th:each="selectCategory: ${tags}"
+                                 th:class="${selectCategoryStat.first ? 'active tab-pane':'tab-pane'}">
+                                <span>
+                                    <span th:each="selectTag: ${selectCategory.tags}">
+                                    <span class="community-tag" onclick="selectTag(this)"
+                                          th:data-tag="${selectTag}"
+                                          th:text="${' '+selectTag}">
+                                    </span>
+                                </span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- Indicates a successful or positive action -->
+                <div class="container-fluid main ">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                            <div class="alert alert-danger col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                                 th:text="${error}"
+                                 th:if="${error != null}">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="btn btn-success btn-publish ">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+            <h4 class="section">Publish Guide</h4>
+            • Post Title: Please describe the issue you are posting in 25 words or less <br>
+            • Post Content: Fill in the details of your problem, make sure the problem description is clear and
+            intuitive, and provide some relevant information <br>
+            • Tag selection: Select one or more appropriate tags, separated by commas, and each tag contains no more
+            than 10 characters <br>
+        </div>
+    </div>
+</div>
+<div th:insert="~{footer :: foot}"></div>
+</body>
+</html>
