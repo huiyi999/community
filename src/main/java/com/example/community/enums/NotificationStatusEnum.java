@@ -1,8 +1,14 @@
 package com.example.community.enums;
 
-
 public enum NotificationStatusEnum {
-    UNREAD(0), READ(1);
+    /**
+     * unread
+     */
+    UNREAD(0),
+    /**
+     * read
+     */
+    READ(1);
     private int status;
 
     public int getStatus() {

@@ -21,39 +21,18 @@ import java.io.IOException;
  * @date: 2022-04-16 8:58 p.m.
  */
 
-
 @Controller("/error")
 @RequestMapping("${server.error.path:${error.path:/error}}")
 public class CustomizedErrorController implements ErrorController {
 
     public final static String STATUS_CODE = "javax.servlet.error.status_code";
 
-    // Handle html Page request error
-    @RequestMapping(value="/error", produces = MediaType.TEXT_HTML_VALUE)
+    /**
+     * Handle html Page request error
+     */
+    @RequestMapping(value = "/error", produces = MediaType.TEXT_HTML_VALUE)
     public ModelAndView errorHtml(HttpServletRequest request, Model model) throws IOException {
 
-        // Integer statusCode = (Integer) request.getAttribute(STATUS_CODE);
-        //
-        // ModelAndView mav = new ModelAndView();
-        //
-        // if(statusCode == 401) {
-        //     mav.addObject("statusCode", 401);
-        //     mav.setViewName("error/4xx");
-        //
-        // }else if(statusCode == 403) {
-        //     mav.addObject("statusCode", 403);
-        //     mav.setViewName("error/4xx");
-        //
-        // }else if(statusCode == 404) {
-        //     mav.addObject("statusCode", 404);
-        //     mav.setViewName("error/404");
-        //
-        // }else {
-        //     mav.addObject("statusCode", 500);
-        //     mav.setViewName("error/500");
-        // }
-        //
-        // return mav;
         HttpStatus status = getStatus(request);
 
         // request error
@@ -67,14 +46,15 @@ public class CustomizedErrorController implements ErrorController {
         }
 
         return new ModelAndView("error");
-
     }
 
-    // obtain HTTP Request status code
+    /**
+     * obtain HTTP Request status code
+     */
     private HttpStatus getStatus(HttpServletRequest request) {
         Integer statusCode = (Integer) request
                 .getAttribute(STATUS_CODE);
-        // Integer statusCode = (Integer) request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
+        /* Integer statusCode = (Integer) request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE); */
         if (statusCode == null) {
             return HttpStatus.INTERNAL_SERVER_ERROR;
         }

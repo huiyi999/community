@@ -41,7 +41,7 @@ public class ProfileController {
                           Model model) {
 
         User user = (User) SecurityUtils.getSubject().getPrincipal();
-        System.out.println("/profile/{action}"+action);
+        System.out.println("/profile/{action}" + action);
 
         if ("posts".equals(action)) {
             model.addAttribute("section", "posts");
@@ -55,13 +55,9 @@ public class ProfileController {
 
             PaginationDTO<NotificationDTO> paginationDTO = notificationService.list(user.getId(), page, size);
             model.addAttribute("pagination", paginationDTO);
-
-            // Long unreadCount = notificationService.unreadCount(user.getId());
-            // model.addAttribute("unreadCount", unreadCount);
         }
         Long unreadCount = notificationService.unreadCount(user.getId());
         request.getSession().setAttribute("unreadCount", unreadCount);
         return "profile";
     }
-
 }

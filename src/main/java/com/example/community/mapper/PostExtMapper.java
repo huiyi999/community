@@ -5,6 +5,9 @@ import com.example.community.model.Post;
 
 import java.util.List;
 
+/**
+ * @author chy
+ */
 public interface PostExtMapper {
     int incViewCount(Post record);
 

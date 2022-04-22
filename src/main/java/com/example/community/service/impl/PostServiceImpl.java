@@ -24,6 +24,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author chy
+ */
 @Service
 public class PostServiceImpl implements PostService {
 
@@ -64,7 +67,6 @@ public class PostServiceImpl implements PostService {
         Integer totalCount = postExtMapper.countBySearch(queryDTO);
         paginationDTO.setPagination(totalCount, page, size);
 
-
         if (StringUtils.isNotBlank(sort)) {
             for (SortTypeEnum sortEnum : SortTypeEnum.values()) {
                 if (sortEnum.name().toLowerCase().equals(sort)) {
@@ -104,7 +106,6 @@ public class PostServiceImpl implements PostService {
 
         PaginationDTO<PostDTO> paginationDTO = new PaginationDTO<>();
         paginationDTO.setPagination(totalCount, page, size);
-
 
         List<Post> postList = postMapper.selectByExampleWithRowbounds(postExample, new RowBounds(offset, size));
 
@@ -177,14 +178,11 @@ public class PostServiceImpl implements PostService {
             PostExample postExample = new PostExample();
             postExample.createCriteria().andIdEqualTo(post.getId());
 
-
             int updated = postMapper.updateByExampleSelective(updatePost, postExample);
             if (updated != 1) {
                 throw new CustomizedException(CustomizedErrorCodeImpl.POST_NOT_FOUND);
-
             }
         }
-
     }
 
     @Override
@@ -211,8 +209,9 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<PostDTO> selectRelated(PostDTO queryDTO) {
-        if (StringUtils.isBlank(queryDTO.getTag()))
+        if (StringUtils.isBlank(queryDTO.getTag())) {
             return new ArrayList<>();
+        }
 
         String[] tags = StringUtils.split(queryDTO.getTag(), ",");
         tags = StringUtils.stripAll(tags);  // remove whitespace
@@ -234,5 +233,4 @@ public class PostServiceImpl implements PostService {
 
         return postDTOS;
     }
-
 }

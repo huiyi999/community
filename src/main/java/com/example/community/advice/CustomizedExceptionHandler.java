@@ -11,14 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * @author : chy
  * @date: 2022-04-16 7:42 p.m.
  */
-
 @ControllerAdvice
 public class CustomizedExceptionHandler {
 
@@ -27,11 +24,10 @@ public class CustomizedExceptionHandler {
     Object handle(HttpServletRequest request, HttpServletResponse response, Throwable ex, Model model) {
         String contentType = request.getContentType();
         if ("application/json".equals(contentType)) {
-            // return json
+            /* return json */
             if (ex instanceof CustomizedException) {
                 return ResultDTO.errorOf((CustomizedException) ex);
             } else {
-                // log.error("handle error", e);
                 return ResultDTO.errorOf(CustomizedErrorCodeImpl.SYS_ERROR);
             }
             // try {
@@ -44,20 +40,15 @@ public class CustomizedExceptionHandler {
             // } catch (IOException ioe) {
             // }
             // return null;
-
-        }else {
+        } else {
             // redirect to error page
             if (ex instanceof CustomizedException) {
-                model.addAttribute("message",ex.getMessage());
-            }else {
-
+                model.addAttribute("message", ex.getMessage());
+            } else {
                 // unhandled exception CustomizedErrorController
-                model.addAttribute("message",CustomizedErrorCodeImpl.SYS_ERROR.getMessage());
+                model.addAttribute("message", CustomizedErrorCodeImpl.SYS_ERROR.getMessage());
             }
             return new ModelAndView("error");
-
         }
-
     }
-
 }

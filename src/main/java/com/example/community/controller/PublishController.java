@@ -17,6 +17,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Objects;
+
+/**
+ * @author chy
+ */
 @Controller
 public class PublishController {
 
@@ -65,9 +70,7 @@ public class PublishController {
         model.addAttribute("tag", tag);
         model.addAttribute("tags", TagCache.get());
 
-
         User user = (User) SecurityUtils.getSubject().getPrincipal();
-        // User user = userMapper.queryUserByUsername(username);
 
         Post post = new Post();
         post.setId(id);
@@ -87,8 +90,9 @@ public class PublishController {
 
         User user = (User) SecurityUtils.getSubject().getPrincipal();
         if (postDTO != null) {
-            if (postDTO.getCreator() != user.getId())
+            if (!Objects.equals(postDTO.getCreator(), user.getId())) {
                 throw new CustomizedException(CustomizedErrorCodeImpl.INVALID_OPERATION);
+            }
         }
 
         model.addAttribute("title", postDTO.getTitle());

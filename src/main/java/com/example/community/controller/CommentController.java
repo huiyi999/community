@@ -16,12 +16,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 /**
  * @author : chy
  * @date: 2022-04-17 4:03 p.m.
  */
-
 @Controller
 public class CommentController {
 
@@ -36,7 +34,6 @@ public class CommentController {
         if (commentCreateDTO == null || StringUtils.isBlank(commentCreateDTO.getContent())) {
             return ResultDTO.errorOf(CustomizedErrorCodeImpl.CONTENT_IS_EMPTY);
         }
-
         Comment comment = new Comment();
         comment.setParentId(commentCreateDTO.getParentId());
         comment.setContent(commentCreateDTO.getContent());
@@ -47,7 +44,6 @@ public class CommentController {
         comment.setCommentCount(0);
         comment.setLikeCount(0);
         commentService.insert(comment, user);
-
         return ResultDTO.okOf();
     }
 
@@ -60,18 +56,11 @@ public class CommentController {
         return ResultDTO.okOf(commentDTOS);
     }
 
-
     @ResponseBody
     @PostMapping(value = "/likeComment")
     public Object vote(@RequestParam(value = "id") Long id) {
         System.out.println("test likeComment");
-        // if (commentCreateDTO == null || StringUtils.isBlank(commentCreateDTO.getContent())) {
-        //     return ResultDTO.errorOf(CustomizedErrorCodeImpl.CONTENT_IS_EMPTY);
-        // }
-        //
-        // Long id = commentCreateDTO.getParentId();
         commentService.incLikeCount(id);
-
         return ResultDTO.okOf();
     }
 }

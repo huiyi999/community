@@ -1,6 +1,5 @@
 package com.example.community.config;
 
-
 import com.example.community.model.Permission;
 import com.example.community.model.Role;
 import com.example.community.model.User;
@@ -15,11 +14,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+/**
+ * @author chy
+ */
 public class UserRealm extends AuthorizingRealm {
 
     @Autowired
     private UserService userService;
-
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
@@ -37,7 +38,6 @@ public class UserRealm extends AuthorizingRealm {
             info.addStringPermission(permission.getName());
         }
         return info;
-
     }
 
     @Override
@@ -53,11 +53,13 @@ public class UserRealm extends AuthorizingRealm {
         System.out.println("doGetAuthenticationInfo username:" + username);
         User user = userService.queryUserByUsername(username);
 
-        if (user == null)
+        if (user == null) {
             throw new UnknownAccountException();
+        }
 
-        if (!password.equals(user.getPassword()))
+        if (!password.equals(user.getPassword())) {
             throw new IncorrectCredentialsException();
+        }
 
         // store into Session
         SecurityUtils.getSubject().getSession().setAttribute("user", user);

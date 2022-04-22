@@ -51,14 +51,15 @@ public class NotificationServiceImpl implements NotificationService {
 
         List<Notification> notifications = notificationMapper.selectByExampleWithRowbounds(notificationExample, new RowBounds(offset, size));
         System.out.println("total notifi: " + notifications.size());
-        if(notifications.size() == 0)
+        if (notifications.size() == 0) {
             return paginationDTO;
+        }
 
         User user = userMapper.selectByPrimaryKey(userId);
         System.out.println("username: " + user.getUsername());
 
         List<NotificationDTO> notificationDTOS = new ArrayList<>();
-        for (Notification notification: notifications) {
+        for (Notification notification : notifications) {
             NotificationDTO notificationDTO = new NotificationDTO();
             BeanUtils.copyProperties(notification, notificationDTO);
             notificationDTO.setTypeName(NotificationTypeEnum.nameOfType(notification.getType()));

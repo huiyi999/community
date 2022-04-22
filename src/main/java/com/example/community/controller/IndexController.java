@@ -3,27 +3,21 @@ package com.example.community.controller;
 import com.example.community.cache.HotTagCache;
 import com.example.community.dto.PaginationDTO;
 import com.example.community.service.PostService;
-import org.springframework.beans.factory.ListableBeanFactoryExtensionsKt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.function.ServerResponse;
 
 import java.util.List;
 
+/**
+ * @author chy
+ */
 @Controller
 public class IndexController {
 
-    // @GetMapping("/index")
-    // public String hello(@RequestParam(name = "name") String name, Model model) {
-    //
-    //     // add value from browser to model
-    //     model.addAttribute("name", name);
-    //     return "index";   // go to templates to find
-    // }
 
     @Autowired
     private PostService postService;
@@ -42,7 +36,7 @@ public class IndexController {
         System.out.println("search: " + search);
         System.out.println("tag: " + tag);
 
-        PaginationDTO pagination = postService.list(page, size, sort, search,tag);
+        PaginationDTO pagination = postService.list(page, size, sort, search, tag);
         List<String> hotTags = hotTagCache.getHots();
         model.addAttribute("pagination", pagination);
         model.addAttribute("search", search);
@@ -54,7 +48,6 @@ public class IndexController {
 
     @RequestMapping("/toLoginPage")
     public String toLoginPage() {
-        ;
         return "user/login";
     }
 

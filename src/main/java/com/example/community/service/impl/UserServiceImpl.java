@@ -12,6 +12,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author chy
+ */
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -74,6 +77,4 @@ public class UserServiceImpl implements UserService {
         System.out.println("Register failed! User exists!");
         return 0;
     }
-
-
 }

@@ -29,9 +29,10 @@ public class NotificationController {
         NotificationDTO notificationDTO = notificationService.read(user.getId(), id);
 
         if (notificationDTO.getType() == NotificationTypeEnum.REPLY_COMMENT.getType()
-                || notificationDTO.getType() == NotificationTypeEnum.REPLY_POST.getType())
+                || notificationDTO.getType() == NotificationTypeEnum.REPLY_POST.getType()) {
             return "redirect:/post/" + notificationDTO.getOuterid();
-        else
+        } else {
             return "redirect:/";
+        }
     }
 }

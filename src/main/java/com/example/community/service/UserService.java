@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author chy
+ */
 @Service
 public interface UserService {
 
@@ -17,5 +20,4 @@ public interface UserService {
     Role queryRoleByUsername(String username);
 
     int addUser(User user);
-
 }

@@ -1,6 +1,5 @@
 package com.example.community.service;
 
-
 import com.example.community.dto.PaginationDTO;
 import com.example.community.dto.PostDTO;
 import com.example.community.model.Post;
@@ -8,10 +7,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author chy
+ */
 @Service
 public interface PostService {
 
-    PaginationDTO<PostDTO> list(Integer page, Integer size, String sort, String search,String tag);
+    PaginationDTO<PostDTO> list(Integer page, Integer size, String sort, String search, String tag);
 
     PaginationDTO<PostDTO> list(Long userId, Integer page, Integer size);
 

@@ -2,7 +2,9 @@ package com.example.community.mapper;
 
 import com.example.community.model.Notification;
 import com.example.community.model.NotificationExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 

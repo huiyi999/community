@@ -25,10 +25,12 @@ public class PaginationDTO<T> {
         } else {
             totalPage = totalCount / size + 1;
         }
-        if (page < 1)
+        if (page < 1) {
             page = 1;
-        if (page > totalPage)
+        }
+        if (page > totalPage) {
             page = totalPage;
+        }
 
         this.page = page;
 
@@ -51,7 +53,7 @@ public class PaginationDTO<T> {
         }
 
         // show Next
-        if (page == totalPage) {
+        if (page.equals(totalPage)) {
             showNext = false;
         } else {
             showNext = true;

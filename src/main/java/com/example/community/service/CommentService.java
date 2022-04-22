@@ -17,7 +17,6 @@ import java.util.List;
 @Service
 public interface CommentService {
 
-
     void insert(Comment comment, User user);
 
     void incLikeCount(Long id);

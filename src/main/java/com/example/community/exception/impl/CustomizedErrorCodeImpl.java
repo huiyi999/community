@@ -7,7 +7,6 @@ import com.example.community.exception.CustomizedErrorCode;
  * @date: 2022-04-16 8:12 p.m.
  */
 
-
 public enum CustomizedErrorCodeImpl implements CustomizedErrorCode {
 
     POST_NOT_FOUND(2001, "The post does not exist. Do you want to try another one?"),

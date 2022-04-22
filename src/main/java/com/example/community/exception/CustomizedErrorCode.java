@@ -5,6 +5,7 @@ package com.example.community.exception;
  * @date: 2022-04-16 8:11 p.m.
  */
 public interface CustomizedErrorCode {
-    String getMessage() ;
+    String getMessage();
+
     Integer getCode();
 }

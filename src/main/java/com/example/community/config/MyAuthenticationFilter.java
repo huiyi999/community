@@ -25,20 +25,20 @@ public class MyAuthenticationFilter extends FormAuthenticationFilter {
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
 
-
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
         log.info("req.getRequestURL().toString()" + req.getRequestURL().toString());
 
         // check if ajax request
         boolean isAjaxRequest = false;
-        if (!StringUtils.isBlank(req.getHeader("Accept")) && req.getHeader("Accept").equals("application/json, text/javascript, */*; q=0.01")) {
+        if (!StringUtils.isBlank(req.getHeader("Accept")) && "application/json, text/javascript, */*; q=0.01".equals(req.getHeader("Accept"))) {
             isAjaxRequest = true;
         }
 
         String port = "", contextPath = "";
-        if (request.getServerPort() != 80)
+        if (request.getServerPort() != 80) {
             port = ":" + request.getServerPort();
+        }
 
         StringBuilder sb = new StringBuilder();
         // http://localhost:8887/toLoginPage
@@ -59,11 +59,11 @@ public class MyAuthenticationFilter extends FormAuthenticationFilter {
             } catch (IOException ioe) {
 
             }
-        } else
+        } else {
             saveRequestAndRedirectToLogin(request, response);
+        }
 
         return false;
-
     }
 
     // @Override

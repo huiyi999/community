@@ -14,10 +14,7 @@ import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -48,15 +45,17 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     @Transactional
-    public void insert(Comment comment,User commentator) {
-        if (comment.getParentId() == null || comment.getParentId() == 0)
+    public void insert(Comment comment, User commentator) {
+        if (comment.getParentId() == null || comment.getParentId() == 0) {
             throw new CustomizedException(CustomizedErrorCodeImpl.TARGET_PARAM_NOT_FOUND);
+        }
 
-        if (comment.getType() == null || !CommentTypeEnum.isExist(comment.getType()))
+        if (comment.getType() == null || !CommentTypeEnum.isExist(comment.getType())) {
             throw new CustomizedException(CustomizedErrorCodeImpl.TYPE_PARAM_WRONG);
+        }
 
         // 1. reply post, ParentId is post id
-        if (comment.getType() == CommentTypeEnum.POST.getType()) {
+        if (Objects.equals(comment.getType(), CommentTypeEnum.POST.getType())) {
             System.out.println("insert post reply");
             Post post = postMapper.selectByPrimaryKey(comment.getParentId());
             if (post == null) {
@@ -70,9 +69,7 @@ public class CommentServiceImpl implements CommentService {
             post.setCommentCount(1);
             postExtMapper.incCommentCount(post);
 
-            createNotify(comment, post.getCreator(), commentator.getUsername(),  post, NotificationTypeEnum.REPLY_POST);
-
-
+            createNotify(comment, post.getCreator(), commentator.getUsername(), post, NotificationTypeEnum.REPLY_POST);
         } else {
             // 2.reply comment, ParentId is comment id
             System.out.println("insert comment reply");
@@ -94,17 +91,15 @@ public class CommentServiceImpl implements CommentService {
             parentComment.setId(comment.getParentId());
             parentComment.setCommentCount(1);
             commentExtMapper.incCommentCount(parentComment);
-            createNotify(comment, dbComment.getCommentator(), commentator.getUsername(),  post, NotificationTypeEnum.REPLY_COMMENT);
+            createNotify(comment, dbComment.getCommentator(), commentator.getUsername(), post, NotificationTypeEnum.REPLY_COMMENT);
         }
-
     }
 
-
-    private void createNotify(Comment comment, Long receiver, String notifierName, Post post, NotificationTypeEnum notificationType ) {
+    private void createNotify(Comment comment, Long receiver, String notifierName, Post post, NotificationTypeEnum notificationType) {
         // if (receiver == comment.getCommentator()) {
         //     return;
         // }
-        System.out.println("comment: "+notifierName);
+        System.out.println("comment: " + notifierName);
         Notification notification = new Notification();
         notification.setGmtCreate(System.currentTimeMillis());
         notification.setReceiver(receiver);
@@ -151,7 +146,6 @@ public class CommentServiceImpl implements CommentService {
                 .andIdIn(userIds);
         List<User> users = userMapper.selectByExample(userExample);
         Map<Long, User> userMap = users.stream().collect(Collectors.toMap(user -> user.getId(), user -> user));
-
 
         // change comment to commentDTO
         List<CommentDTO> commentDTOS = comments.stream().map(comment -> {

@@ -81,9 +81,9 @@ public class UserController {
                     msg = "Unknown error，error：" + e.getMessage();
                 }
             }
-        } else
+        } else {
             msg = "Please input username and password!";
-        // redirectAttributes.addFlashAttribute("msg", msg);
+        }
         model.addAttribute("msg", msg);
         // failed to sign in, redirect to login page
         return "user/login";
@@ -100,12 +100,10 @@ public class UserController {
     //     SecurityUtils.getSubject().logout();
     // }
 
-
     @PostMapping("/register")
     public String register(@RequestParam(value = "username", required = false) String username,
                            @RequestParam(value = "password", required = false) String password,
-                           Model model,
-                           RedirectAttributes redirectAttributes) {
+                           Model model) {
         System.out.println(username);
         String msg = null;
 
@@ -115,17 +113,14 @@ public class UserController {
         user.setRoleId(Long.valueOf(3));
         user.setAvatarUrl("/images/user-profile.png");
 
-
         int i = userService.addUser(user);
         System.out.println(i);
         if (i == 1) {
             msg = "Sign up Successfully! Please login in!";
-            // redirectAttributes.addAttribute("msg", msg);
             model.addAttribute("msg", msg);
             return "user/login";
         } else {
             msg = "Sign up failed! User already exists!";
-            // redirectAttributes.addAttribute("msg", msg);
             model.addAttribute("msg", msg);
             return "user/register";
         }

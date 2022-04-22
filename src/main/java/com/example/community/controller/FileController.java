@@ -29,12 +29,11 @@ public class FileController {
             // uncompleted
 
             return fileDTO;
-        }catch (Exception e){
+        } catch (Exception e) {
 
             fileDTO.setSuccess(0);
             fileDTO.setMessage("Upload failed");
             return fileDTO;
         }
-
     }
 }

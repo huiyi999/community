@@ -15,6 +15,9 @@ import javax.servlet.Filter;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * @author chy
+ */
 @Configuration
 public class ShiroConfig {
 
@@ -68,7 +71,6 @@ public class ShiroConfig {
         // store map into bean
         factoryBean.setFilterChainDefinitionMap(filterChainMap);
         return factoryBean;
-
     }
 
     @Bean
@@ -100,9 +102,7 @@ public class ShiroConfig {
         cookieRememberMeManager.setCookie(rememberMeCookie());
         cookieRememberMeManager.setCipherKey(Base64.decode("pybbs is the best!".getBytes()));
         return cookieRememberMeManager;
-
     }
-
 
     @Bean
     public FormAuthenticationFilter formAuthenticationFilter() {
@@ -119,5 +119,4 @@ public class ShiroConfig {
     public ShiroDialect shiroDialect() {
         return new ShiroDialect();
     }
-
 }

@@ -3,7 +3,6 @@ package com.example.community.cache;
 import com.example.community.dto.HotTagDTO;
 import lombok.Data;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 import java.util.*;
 
@@ -15,8 +14,8 @@ import java.util.*;
 @Component
 @Data
 public class HotTagCache {
-    private List<String> hots = new ArrayList<>();
 
+    private List<String> hots = new ArrayList<>();
 
     // top N question
     public void updateTags(Map<String, Integer> tags) {
@@ -35,7 +34,6 @@ public class HotTagCache {
                     priorityQueue.poll();
                     priorityQueue.add(hotTagDTO);
                 }
-
             }
         });
 
@@ -48,6 +46,5 @@ public class HotTagCache {
         }
 
         hots = sortedTags;
-
     }
 }

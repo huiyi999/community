@@ -1,15 +1,22 @@
 package com.example.community.enums;
 
+import java.util.Objects;
+
 /**
  * @author : chy
  * @date: 2022-04-17 4:56 p.m.
  */
 
 public enum CommentTypeEnum {
+    /**
+     * post
+     */
     POST(1),
+    /**
+     * comment
+     */
     COMMENT(2);
     private Integer type;
-
 
     public Integer getType() {
         return type;
@@ -21,7 +28,7 @@ public enum CommentTypeEnum {
 
     public static boolean isExist(Integer type) {
         for (CommentTypeEnum commentTypeEnum : CommentTypeEnum.values()) {
-            if (commentTypeEnum.getType() == type) {
+            if (Objects.equals(commentTypeEnum.getType(), type)) {
                 return true;
             }
         }
