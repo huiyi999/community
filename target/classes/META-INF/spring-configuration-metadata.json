@@ -1,0 +1,11 @@
+{
+  "groups": [],
+  "properties": [
+    {
+      "name": "log4j.appender.Console",
+      "type": "java.lang.String",
+      "description": "Description for log4j.appender.Console."
+    }
+  ],
+  "hints": []
+}
