@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70095144-f2a0-448a-bca3-f279055c4234" name="Changes" comment="" />
+    <list default="true" id="70095144-f2a0-448a-bca3-f279055c4234" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +104,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/Desktop/community-master/src/main/resources/static/js/plugins/image-dialog/image-dialog.js" />
   </component>
   <component name="ReaderModeSettings">
@@ -198,7 +201,8 @@
       <workItem from="1650668971878" duration="642000" />
       <workItem from="1650669639501" duration="50000" />
       <workItem from="1650669807493" duration="114000" />
-      <workItem from="1654203658810" duration="710000" />
+      <workItem from="1654203658810" duration="942000" />
+      <workItem from="1654556151577" duration="1518000" />
     </task>
     <servers />
   </component>
