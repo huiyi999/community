@@ -8,8 +8,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70095144-f2a0-448a-bca3-f279055c4234" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/community/config/CrossConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/community/config/CrossConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_11_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_58.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/en-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/en-il.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/ga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/dist/locale/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/cv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/fr-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/oc-lnc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/ss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/locale/x-pseudo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/min/locales.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/min/moment-with-locales.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/create/from-string-and-format.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/duration/valid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/constructor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/formats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/locale/lists.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/day-of-year.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/units/year.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/lib/utils/is-calendar-spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/fy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/moment/src/locale/ru.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,17 +101,12 @@
         <option name="userSettingsFile" value="$USER_HOME$/Maven/apache-maven-3.8.4/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="enabledProfiles">
-      <list>
-        <option value="dev" />
-      </list>
-    </option>
   </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedIndex" value="2" />
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="27hmSZCgjCuRkt8oinjQFIgockq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -83,7 +117,11 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="h2&#10;mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="JavaClassFindUsagesOptions.isMethodsUsages" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -101,9 +139,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.23828125" />
+    <property name="project.structure.side.proportion" value="0.26666668" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/Desktop/community-master/src/main/resources/static/js/plugins/image-dialog/image-dialog.js" />
   </component>
@@ -205,7 +243,7 @@
       <workItem from="1654556151577" duration="1518000" />
       <workItem from="1655742470579" duration="1738000" />
       <workItem from="1684256220139" duration="359000" />
-      <workItem from="1685816387364" duration="8605000" />
+      <workItem from="1685816387364" duration="10307000" />
     </task>
     <servers />
   </component>
