@@ -23,6 +23,8 @@ address: http://localhost:8887/
 |  MyBatisCodeHelperPro |  Intellij Plugin for Mybatis, Type safe sql support, plugin can recognize mybatis dynamic sql |  https://plugins.jetbrains.com/plugin/9837-mybatiscodehelperpro   |
 |  PageHelper  |  MyBatis Pagination |  https://github.com/pagehelper/Mybatis-PageHelper
 |  Markdown plugin  |  Markdown editor   |    http://editor.md.ipandao.com/en.html
+|  ELK    | ElasticSearch + Logstash + Kibana | https://www.elastic.co/what-is/elk-stack
+|  RabbitMq    |  An open-source message-broker software   |   https://www.rabbitmq.com/
 
 
 ## Extended materials
@@ -52,6 +54,8 @@ address: http://localhost:8887/
 8. Logging: specify log setting in application.properties. https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.logging
 9. scheduling task: https://spring.io/guides/gs/scheduling-tasks/
    update rate: (fixedRate = 1000 * 60 * 60 * 3) priority = postCount * 5 + commentCount   Top N
+10. ELK: search posts, which is faster than mysql
+11. RabbitMq: used for message queue
 
 
 ## Questions

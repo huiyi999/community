@@ -8,8 +8,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70095144-f2a0-448a-bca3-f279055c4234" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/community.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/community.log/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/community.log/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/community/service/MQService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/community/service/MQService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/CommunityApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/CommunityApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/advice/CustomizedExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/advice/CustomizedExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/cache/HotTagCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/cache/HotTagCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/cache/TagCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/cache/TagCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/config/MyAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/config/MyAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/config/MyRolesAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/config/MyRolesAuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/config/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/config/ShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/config/UserRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/config/UserRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/controller/CustomizedErrorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/controller/CustomizedErrorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/controller/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/controller/ProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/controller/PublishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/controller/PublishController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/dto/CommentCreateDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/dto/CommentCreateDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/dto/PostDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/dto/PostDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/enums/CommentTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/enums/CommentTypeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/enums/NotificationStatusEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/enums/NotificationStatusEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/enums/NotificationTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/enums/NotificationTypeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/exception/impl/CustomizedErrorCodeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/exception/impl/CustomizedErrorCodeImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/service/impl/CommentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/service/impl/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/service/impl/PostServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/community/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/community/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +49,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="JavaScript File" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -93,7 +122,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore&#10;/Users/chy/IdeaProjects/community/src/main/java/com/example/community/config/EsConfig.java" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="HTML" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -203,6 +232,9 @@
       <workItem from="1650669807493" duration="114000" />
       <workItem from="1654203658810" duration="942000" />
       <workItem from="1654556151577" duration="1518000" />
+      <workItem from="1655742470579" duration="1738000" />
+      <workItem from="1684256220139" duration="359000" />
+      <workItem from="1685816387364" duration="7941000" />
     </task>
     <servers />
   </component>
